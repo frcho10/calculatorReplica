@@ -290,7 +290,7 @@
 				DEVELOPMENT_TEAM = CS3VR43D5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = calculatorReplica/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Calculadora Fer";
+				INFOPLIST_KEY_CFBundleDisplayName = MacCalc;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -323,7 +323,7 @@
 				DEVELOPMENT_TEAM = CS3VR43D5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = calculatorReplica/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Calculadora Fer";
+				INFOPLIST_KEY_CFBundleDisplayName = MacCalc;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
