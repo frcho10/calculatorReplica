@@ -68,10 +68,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal">
-                                        <string key="title">⁺∕₋
-</string>
-                                    </state>
+                                    <state key="normal" title="⁺∕₋"/>
                                     <connections>
                                         <action selector="operatorPlusMinusAction:" destination="-1" eventType="touchUpInside" id="0M8-Bz-dQW"/>
                                     </connections>
@@ -169,7 +166,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="✕"/>
+                                    <state key="normal" title="×"/>
                                     <connections>
                                         <action selector="operatorMultiplicationAction:" destination="-1" eventType="touchUpInside" id="0QW-w2-AUe"/>
                                     </connections>
@@ -233,11 +230,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal">
-                                        <string key="title">-
-
-</string>
-                                    </state>
+                                    <state key="normal" title="−"/>
                                     <connections>
                                         <action selector="operatorSubstractionAction:" destination="-1" eventType="touchUpInside" id="LsR-I3-XpF"/>
                                     </connections>
