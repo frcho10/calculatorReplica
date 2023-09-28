@@ -175,6 +175,11 @@ class homeViewController: UIViewController {
             if (prevOperation == .multiplication || prevOperation == OperationType.divition) && (pending != 0) {
                 equalWasSelected = true // flag to handle execute all result
             }
+            if (prevOperation == .multiplication || prevOperation == OperationType.divition) && pendingOperation != .none {
+                equalWasSelected = false
+                operation = pendingOperation
+                pendingOperation = .none
+            }
             result()
         }else{
             prevOperation = .addition
@@ -194,6 +199,11 @@ class homeViewController: UIViewController {
         if operation != .none && equalWasSelected == false {
             if (prevOperation == .multiplication || prevOperation == OperationType.divition) && (pending != 0) {
                 equalWasSelected = true // flag to handle execute all result
+            }
+            if (prevOperation == .multiplication || prevOperation == OperationType.divition) && pendingOperation != .none {
+                equalWasSelected = false
+                operation = pendingOperation
+                pendingOperation = .none
             }
             result()
         }else{
@@ -219,8 +229,12 @@ class homeViewController: UIViewController {
                 pendingOperation = prevOperation
             }else{
                 //aqui hace falta guardar el pendingOperation
-                prevOperation = .multiplication
-                result()
+                if (pendingOperation == .addition || pendingOperation == OperationType.substraction) {
+                    print("Before was divition or multiplication still is awaiting a number, it doesn't requires result")
+                }else {
+                    prevOperation = .multiplication
+                    result()
+                }
             }
         }else{
             if prevOperation == .addition {
@@ -238,6 +252,7 @@ class homeViewController: UIViewController {
             }else{
                 
             }
+            equalWasSelected = false
             prevOperation = .multiplication
         }
         
@@ -260,8 +275,13 @@ class homeViewController: UIViewController {
                 pendingOperation = prevOperation
             }else{
                 //aqui hace falta guardar el pendingOperation
-                prevOperation = .divition
-                result()
+                if (pendingOperation == .addition || pendingOperation == OperationType.substraction) {
+                    print("Before was divition or multiplication still is awaiting a number, it doesn't requires result")
+                }else {
+                    prevOperation = .divition
+                    result()
+                }
+                
             }
         }else{
             if prevOperation == .addition {
@@ -279,7 +299,8 @@ class homeViewController: UIViewController {
             }else{
                 
             }
-            prevOperation = .multiplication
+            equalWasSelected = false
+            prevOperation = .divition
         }
         
         operating = true
@@ -430,11 +451,11 @@ class homeViewController: UIViewController {
             }
             break
         case .multiplication:
-            if (prevOperation == .addition || prevOperation == OperationType.substraction) && (pending != 0) {
+            if (prevOperation == .addition || prevOperation == OperationType.substraction) && (pendingOperation != .none) {
                 if prevOperation == .addition{
-                    total = (total * temp) + pending
+                    total = pending + (total * temp)
                 }else{
-                    total = (total * temp) - pending
+                    total = pending - (total * temp)
                 }
                 pending = 0.0
                 pendingOperation = .none
@@ -448,9 +469,11 @@ class homeViewController: UIViewController {
                     
                 }else{
                     if pendingOperation == .addition{
-                        total = (total * temp) + pending
+                        total = pending + (total * temp)
+                    }else if pendingOperation == .substraction{
+                        total = pending - (total * temp)
                     }else{
-                        total = (total * temp) - pending
+                        total = total * temp
                     }
                     pending = 0.0
                     pendingOperation = .none
@@ -458,7 +481,7 @@ class homeViewController: UIViewController {
             }
             break
         case .divition:
-            if (prevOperation == .addition || prevOperation == OperationType.substraction) && (pending != 0) {
+            if (prevOperation == .addition || prevOperation == OperationType.substraction) && (pendingOperation != .none) {
                 if prevOperation == .addition{
                     total = (total / temp) + pending
                 }else{
@@ -477,8 +500,10 @@ class homeViewController: UIViewController {
                 }else{
                     if pendingOperation == .addition{
                         total = (total / temp) + pending
-                    }else{
+                    }else if pendingOperation == .substraction{
                         total = (total / temp) - pending
+                    }else{
+                        total = total / temp
                     }
                     pending = 0.0
                     pendingOperation = .none
