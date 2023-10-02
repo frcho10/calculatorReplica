@@ -7,10 +7,13 @@ This is an application that was created with the same functionalities as the iPh
 # Screeens
 
 <img src="https://i.ibb.co/6bCwmxb/IMG-7199.jpg" width="200">
-<img src="https://i.ibb.co/vjD294q/IMG-7308.jpg" width="200">
-<img src="https://i.ibb.co/kxM20yH/IMG-7309.jpg" width="200">
-<img src="https://i.ibb.co/0KW7ZhM/IMG-7310.jpg" width="200">
-<img src="https://i.ibb.co/8cZyfzc/IMG-7311.jpg" width="200">
+<div>
+  <img src="https://i.ibb.co/vjD294q/IMG-7308.jpg" width="200"><img src="https://i.ibb.co/kxM20yH/IMG-7309.jpg" width="200">
+</div>
+<div>
+  <img src="https://i.ibb.co/0KW7ZhM/IMG-7310.jpg" width="200"><img src="https://i.ibb.co/8cZyfzc/IMG-7311.jpg" width="200">
+</div>
+
 
 <!---
 https://ibb.co/G5FgmQp
